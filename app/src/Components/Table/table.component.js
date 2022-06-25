@@ -36,10 +36,9 @@ export const TableComponent = () => {
     }
 
     const deleteUser = (id) => {
-        console.log(id);
-        api.delete('delete-user', { id })
+        api.post('/delete-user', { id })
         .then( res => console.log(res) )
-        .catch( err => console.log(err) );
+        .catch( err => console.log(err) )
     }
 
     return (
